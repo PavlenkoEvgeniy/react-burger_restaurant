@@ -15,12 +15,12 @@ class Landing extends React.Component {
 
   getTitle = (restaurant) => {
     const { title, url } = restaurant;
-    this.setState({url: url, title: title, display: false})
+    this.setState({ url: url, title: title, display: false });
   };
 
   goToRestaurant = () => {
-    console.log('Go to restaurant')
-  }
+    console.log("Go to restaurant");
+  };
 
   render() {
     return (
@@ -28,8 +28,9 @@ class Landing extends React.Component {
         <div className="restaurant_select_top">
           <div
             onClick={this.displayList}
-            className="restaurant_select_top-header font-effect-outline">
-            {this.state.title ? `${this.state.title}` : 'Выбери расторан'}
+            className="restaurant_select_top-header font-effect-outline"
+          >
+            {this.state.title ? `${this.state.title}` : "Выбери расторан"}
           </div>
           <div className="arrow_picker">
             <div className="arrow_picker-up"></div>
@@ -52,7 +53,9 @@ class Landing extends React.Component {
             </div>
           ) : null}
         </div>
-        {this.state.title ? <button onClick={this.goToRestaurant}>Перейти в ресторан</button> : null}
+        {this.state.title ? (
+          <button onClick={this.goToRestaurant}>Перейти в ресторан</button>
+        ) : null}
       </div>
     );
   }
