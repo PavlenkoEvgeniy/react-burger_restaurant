@@ -19,7 +19,8 @@ class Landing extends React.Component {
   };
 
   goToRestaurant = () => {
-    console.log("Go to restaurant");
+    const {url} = this.state;
+    this.props.history.push(`/restaurant/${url}`);
   };
 
   render() {
@@ -30,7 +31,7 @@ class Landing extends React.Component {
             onClick={this.displayList}
             className="restaurant_select_top-header font-effect-outline"
           >
-            {this.state.title ? `${this.state.title}` : "Выбери расторан"}
+            {this.state.title ? `${this.state.title}` : "Выбери рeсторан"}
           </div>
           <div className="arrow_picker">
             <div className="arrow_picker-up"></div>
