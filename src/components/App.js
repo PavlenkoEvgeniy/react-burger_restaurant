@@ -10,7 +10,6 @@ import base from "../base";
 class App extends React.Component {
   static propTypes = {
     match: PropTypes.object,
-    
   }
 
   state = {
